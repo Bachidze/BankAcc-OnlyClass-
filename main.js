@@ -1,7 +1,7 @@
 
 class BankAccount{
     constructor(initValue = 0){
-        this.transitionHistory = []
+        this.transactionHistory = []
         this.balance = initValue
     }
     addhistory(type,amount,id){
@@ -14,7 +14,7 @@ class BankAccount{
         if(!id){
             delete history.id
         }
-        this.transitionHistory.push(history)
+        this.transactionHistory.push(history)
     }
     deposit(amount){
         this.balance += amount
@@ -40,7 +40,7 @@ class BankAccount{
         return this.balance
     }
     getHistory(){
-        return this.transitionHistory
+        return this.transactionHistory
     }
 }
 
